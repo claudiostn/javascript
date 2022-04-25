@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="estilo.css"> <!--criando um css externo-->
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1> <!--titulo do site-->
+    </header>
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0"> <!--input de número para o ano-->
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masc" checked> <!--input de caixa de verificacao para os sexos-->
+                <label for="masc">Masculino</label> <!--label para os nomes dos sexos-->
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()"> <!--botão para verificar o ano e o sexo-->
+            </p>
+        </div>
+        <div id="res"> <!--div para o resultado da verificação-->
+        </div>
+    </section>
+    <footer>
+        <p>&copy Cirilinho</p> <!--rodapé do site-->
+    </footer>
+    <script src="script.js"></script> <!--criando um script externo-->
+</body>
+</html>

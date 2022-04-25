@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar estrangeiros</title>
+</head>
+<body>
+    <h1>Verificar o país</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="verificarPais()">
+    <div id="respais"></div>
+    <script>
+        var txtp = document.getElementById('txtpais')
+        var resultadopais = document.querySelector('div#respais')
+
+        function verificarPais(){
+            var pais1 = String(txtp.value)
+            resultadopais.innerHTML += `<p>Você mora no(a) ${pais1}</p>` 
+
+            if(pais1 == 'Brasil'){
+                resultadopais.innerHTML += '<p>Você é Brasileiro</p>'
+            } else {
+                resultadopais.innerHTML += '<p>Você é Estrangeiro</p>'
+            }
+            }
+    </script>
+</body>
+</html>
